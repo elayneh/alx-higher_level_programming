@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 def no_c(my_string):
     listofchars = list(my_string)
     for char in listofchars:
