@@ -6,6 +6,6 @@ def print_matrix_integer(matrix=[[]]):
             if clm == len(row):
                 print("{:d}".format(clm), end="")
             else:
-                print("{:d}".format(j), end="")
+                print("{:d}".format(clm), end=" ")
             clm = clm + 1
         print()
