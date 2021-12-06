@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 def raise_exception():
-    raise TypeError
+    wrong_code = 13 + "37"
 
