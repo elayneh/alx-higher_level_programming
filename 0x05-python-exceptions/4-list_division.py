@@ -6,11 +6,11 @@ def list_division(my_list_1, my_list_2, list_length):
         try:
             div = my_list_1[i] / my_list_2[i]
         except TypeError:
-            print("wrong type")
+            print('wrong type')
         except ZeroDivisionError:
-            print("division by 0")
+            print('division by 0')
         except IndexError:
-            print("out of ranage")
+            print('out of ranage')
         finally:
             formed_list.append(div)
             div = 0
