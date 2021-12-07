@@ -4,9 +4,9 @@
 
 class Square:
     """ Class Square """
-    def __init__(self, size):
+    def __init__(self, size=0):
         """ Constructor """
-        self.__size = size
+        self.size = size
 
     @property
     def size(self):
@@ -15,7 +15,7 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """ setter """
+        """ Setter """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
@@ -23,6 +23,6 @@ class Square:
         else:
             self.__size = value
 
-        def area(self):
-            """ Calculatre square area """ 
-            return(self.__size * self.__size)
+    def area(self):
+        """ Calculatre square area """
+        return(self.__size * self.__size)
