@@ -6,5 +6,5 @@ def add_integer(a, b=98):
     if isinstance(a, float):
         a = int(b)
     if isinstance(b, float):
-        b  = float(b)
+        b  = int(b)
     return a + b
