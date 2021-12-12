@@ -1,0 +1,27 @@
+>>> caller = __import__('3-say_my_name').say_my_name
+
+>>> caller()
+Traceback (most recent call last):
+TypeError: caller() missing 1 required positional argument: 'first_name'
+
+>>> caller("A", "B", "C")
+Traceback (most recent call last):
+TypeError: caller() takes from 1 to 2 positional arguments but 3 were given
+
+>>> caller(42)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> caller(42, "Belayneh")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> caller("Belayneh", 42)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> caller("Belayneh", "Getachew")
+My name is Belayneh Getachew
+
+>>> caller("Belayneh")
+My name is Belayneh
