@@ -1,17 +1,10 @@
-#!/usr/bin/python3
-# doctest
 def add_integer(a, b=98):
-    """
-    Return the result of a + b
-    >>> add_integer(1, 2)
-    3
-    """
-    if not isinstance(a, int):
+    if not isinstance(a, int) and not isinstance(a, float):
         raise ValueError("a must be an integer")
-    elif isinstance(a, float):
-        a = int(a)
-    if not isinstance(b , (int, float)):
+    if not isinstance(b, int) and not isinstance(b, float):
         raise ValueError("b must be an integer")
-    elif isinstance(b, float):
-        b = int(b)
+    if isinstance(a, float):
+        a = int(b)
+    if isinstance(b, float):
+        b  = float(b)
     return a + b
