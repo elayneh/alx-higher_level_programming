@@ -12,16 +12,16 @@ TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
 Traceback (most recent call last):
 TypeError: first_name must be a string
 
->>> say_my_name(42, "Belayneh")
+>>> say_my_name(42, "Hamilton")
 Traceback (most recent call last):
 TypeError: first_name must be a string
 
->>> say_my_name("Belayneh", 42)
+>>> say_my_name("Alex", 42)
 Traceback (most recent call last):
 TypeError: last_name must be a string
 
->>> say_my_name("Belayneh", "Getachew")
-My name is Belayneh Getachew
+>>> say_my_name("Alex", "Hamilton")
+My name is Alex Hamilton
 
->>> say_my_name("Belayneh")
-My name is Belayneh
+>>> say_my_name("Alex")
+My name is Alex 
