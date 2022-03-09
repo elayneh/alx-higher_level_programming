@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-list the first State object from a database
+list all State objects that contain the letter a from a database
 """
 
 import sqlalchemy
@@ -16,9 +16,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    first_state = session.query(State).order_by(State.id).first()
-    if first_state is not None:
-        print("{}: {}".format(first_state.id, first_state.name))
-    else:
-        print("Nothing")
+    s = '%a%'
+    states = session.query(State).filter(State.name.like(s)).order_by(State.id)
+    for state in states:
+        print("{}: {}".format(state.id, state.name))
     session.close()
