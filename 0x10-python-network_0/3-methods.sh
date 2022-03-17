@@ -1,3 +1,3 @@
 #!/bin/bash
 # display all allowed verbs here
-curl -v -X "$1"
+curl -sI "$1" | grep "allow: " | sed 's/allow: //'
