@@ -3,7 +3,7 @@
 import urllib.request
 
 def fun_fetch():
-    with urllib.request.urlopen("https://intranet.hbtn.io/status") as response:
+    with urllib.request.urlopen("https://alx-intranet.hbtn.io/status") as response:
         page = response.read()
         print("Body response:")
         print("\t- type: {}".format(type(page)))
