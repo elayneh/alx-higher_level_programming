@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """Send POST and display the response"""
-import email
 import urllib.request
-import urllib.parse
 import sys
 
 
