@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-""" take the url and send request to the url finally display the value of the X-Request-Id """
+"""Fetches header"""
 import urllib.request, sys
 
+
 def fetcher():
+    """fetch the given code"""
     with urllib.request.urlopen(sys.argv[1]) as response:
         header = response.info()
         print(header["X-Request-Id"])
