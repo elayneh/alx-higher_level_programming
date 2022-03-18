@@ -3,7 +3,6 @@
 import urllib.request, sys
 
 def fetcher():
-    """function to fetch"""
     with urllib.request.urlopen(sys.argv[1]) as response:
         header = response.info()
         print(header["X-Request-Id"])
