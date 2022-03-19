@@ -1,21 +1,22 @@
 #!/usr/bin/python3
-"""take a letter and post a request to http://0.0.0.0:5000/search_user
+"""Sends a POST request to http://0.0.0.0:5000/search_user with a given letter.
+  - The letter is sent as the value of the variable `q`.
+  - If no letter is provided, sends `q=""`.
 """
-
-import requests
 import sys
+import requests
+
 
 if __name__ == "__main__":
-    url = "http://0.0.0.0:5000/search_user"
-    letter = "" if len(sys.argv) == 1 else sys.sys.argv[1]
-    Value = {'q': ""}
+    letter = "" if len(sys.argv) == 1 else sys.argv[1]
+    payload = {"q": letter}
 
-    response = requests.post(url, data=Value)
+    r = requests.post("http://0.0.0.0:5000/search_user", data=payload)
     try:
-        resp = response.json()
-        if resp == {}:
+        response = r.json()
+        if response == {}:
             print("No result")
         else:
-            print("[{}] {}".format(resp.get("id"), resp.get("name")))
+            print("[{}] {}".format(response.get("id"), response.get("name")))
     except ValueError:
         print("Not a valid JSON")
