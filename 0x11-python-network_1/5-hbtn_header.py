@@ -4,9 +4,13 @@
     """
 import requests
 import sys
+
+
 def fetch_by_get():
     url = sys.argv[1]
     response = requests.get(url)
     print(response.headers.get("X-request-Id"))
+
+
 if __name__ == "__main__":
     fetch_by_get()
