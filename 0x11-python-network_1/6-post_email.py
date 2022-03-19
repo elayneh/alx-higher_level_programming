@@ -7,5 +7,5 @@ import sys
 
 value = {"email": sys.argv[2]
          }
-response = requests.post(sys.argv[1], value)
+response = requests.post(sys.argv[1], data=value)
 print(response)
