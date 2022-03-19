@@ -4,8 +4,8 @@ finally display the response
 """
 import requests
 import sys
-
+url = sys.argv[1]
 value = {"email": sys.argv[2]
          }
-response = requests.post(sys.argv[1], data=value)
-print(response)
+response = requests.post(url, data=value)
+print(response.text)
