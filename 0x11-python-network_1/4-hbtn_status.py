@@ -3,7 +3,7 @@
     """
 import requests
 
-url = "https://intranet.hbtn.io/status"
+url = "https://alx-intranet.hbtn.io/status"
 out_put = requests.get(url)
 print("Body response:")
 print("\t- type: {}".format(type(out_put.text)))
