@@ -2,7 +2,7 @@
 const request = require('request');
 let count = 0;
 
-request(process.argv[2], function (err, response, body) {
+request(process.argv[2], function (_err, _response, body) {
 	body = JSON.parse(body).results;
 
 	for (let idx = 0; idx < body.length; ++idx) {
